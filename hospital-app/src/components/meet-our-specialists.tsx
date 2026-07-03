@@ -4,41 +4,8 @@ import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Activity, ArrowRight, Clock } from "lucide-react";
+import { specialists } from "@/lib/data/staff";
 
-const specialists = [
-  {
-    name: "Dr. James Okafor",
-    specialty: "Cardiology",
-    experience: "18 Years Experience",
-    bio: "A board-certified cardiologist renowned for his expertise in interventional cardiology and heart failure management, serving thousands of patients.",
-    image: "/staff/dr-james-okafor.png",
-    profileHref: "/staff-and-doctors#dr-james-okafor",
-  },
-  {
-    name: "Dr. Sarah Chen",
-    specialty: "Neurology",
-    experience: "14 Years Experience",
-    bio: "Specialist in stroke, epilepsy, and neuro-rehabilitation, Dr. Chen combines cutting-edge research with compassionate patient-centred treatment.",
-    image: "/staff/dr-sarah-chen.png",
-    profileHref: "/staff-and-doctors#dr-sarah-chen",
-  },
-  {
-    name: "Dr. Michael Patel",
-    specialty: "General Surgery",
-    experience: "20 Years Experience",
-    bio: "Highly experienced in minimally invasive and laparoscopic surgical techniques, delivering precision and safety in every procedure.",
-    image: "/staff/dr-michael-patel.png",
-    profileHref: "/staff-and-doctors#dr-michael-patel",
-  },
-  {
-    name: "Dr. Amina Hassan",
-    specialty: "Paediatrics",
-    experience: "11 Years Experience",
-    bio: "Dedicated to the health and development of children from newborn to adolescent, offering expert care in a warm and child-friendly environment.",
-    image: "/staff/dr-amina-hassan.png",
-    profileHref: "/staff-and-doctors#dr-amina-hassan",
-  },
-];
 
 /* ─── Framer-motion variants ─── */
 const headerVariants: Variants = {
