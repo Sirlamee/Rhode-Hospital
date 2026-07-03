@@ -12,7 +12,7 @@ import { Clock, Mail, Phone, Award, BookOpen } from "lucide-react";
 const doctors = [
   {
     id: "dr-james-okafor",
-    name: "Dr. James Okafor",
+    name: "Dawodu Adegbola",
     specialty: "Cardiology",
     experience: "18 Years Experience",
     qualifications: "MBBCh, FWACP (Internal Medicine), Fellowship in Interventional Cardiology",
