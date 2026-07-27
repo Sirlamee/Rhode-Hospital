@@ -15,7 +15,7 @@ export default function FloatingQuickActions() {
   return (
     <>
       {/* Desktop Version */}
-      <div className="fixed bottom-8 right-8 z-[100] hidden md:flex flex-col gap-4">
+      <div className="fixed bottom-8 right-8 z-100 hidden md:flex flex-col gap-4">
         <button
           onClick={handleEmergency}
           className="group relative flex items-center justify-center w-14 h-14 bg-white text-red-500 rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.08)] border border-red-50 hover:bg-red-50 hover:scale-110 hover:shadow-xl transition-all duration-300 ease-out"
@@ -41,7 +41,7 @@ export default function FloatingQuickActions() {
       </div>
 
       {/* Mobile Version (Expandable FAB) */}
-      <div className="fixed bottom-6 right-6 z-[100] md:hidden flex flex-col items-end gap-3">
+      <div className="fixed bottom-6 right-6 z-100 md:hidden flex flex-col items-end gap-3">
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -73,7 +73,7 @@ export default function FloatingQuickActions() {
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`flex items-center justify-center w-14 h-14 rounded-full shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300 ease-out active:scale-95 ${isOpen ? 'bg-gray-800 text-white rotate-[135deg]' : 'bg-[#1D6FB8] text-white hover:bg-blue-700'}`}
+          className={`flex items-center justify-center w-14 h-14 rounded-full shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300 ease-out active:scale-95 ${isOpen ? 'bg-gray-800 text-white rotate-135' : 'bg-[#1D6FB8] text-white hover:bg-blue-700'}`}
           aria-label="Quick Actions Menu"
         >
           <Plus size={28} />

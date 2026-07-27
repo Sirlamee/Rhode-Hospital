@@ -55,7 +55,7 @@ export default function StaffAndDoctorsClient() {
                 {/* ── Column 1: Image ── */}
                 <div className="relative bg-slate-100">
                   {/* Alternate image position for visual variety */}
-                  <div className="relative w-full h-72 md:h-full min-h-[400px]">
+                  <div className="relative w-full h-72 md:h-full min-h-100">
                     <Image
                       src={doctor.image}
                       alt={`Portrait of ${doctor.name}, ${doctor.specialty} specialist at Rhode Hospital`}
