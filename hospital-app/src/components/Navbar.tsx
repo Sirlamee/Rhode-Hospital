@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -48,19 +49,20 @@ export default function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0, overflow: "hidden" }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="bg-blue-900 text-white text-xs"
+            style={{ backgroundColor: "var(--brand-navy)" }}
+            className="text-white text-xs"
           >
             <div className="max-w-7xl mx-auto px-6 py-2 flex flex-col sm:flex-row justify-between items-center">
               <div className="flex gap-3 sm:gap-4 items-center">
-                <Link href="#" className="hover:text-blue-200 transition-colors">Terms</Link>
-                <span className="text-blue-400">|</span>
-                <Link href="#" className="hover:text-blue-200 transition-colors">Privacy Policy</Link>
-                <span className="text-blue-400">|</span>
-                <Link href="#" className="hover:text-blue-200 transition-colors">Legal Agreement</Link>
+                <Link href="#" className="hover:text-red-200 transition-colors">Terms</Link>
+                <span style={{ color: "var(--brand-maroon-pale)" }}>|</span>
+                <Link href="#" className="hover:text-red-200 transition-colors">Privacy Policy</Link>
+                <span style={{ color: "var(--brand-maroon-pale)" }}>|</span>
+                <Link href="#" className="hover:text-red-200 transition-colors">Legal Agreement</Link>
               </div>
               <div className="flex gap-4 mt-2 sm:mt-0 items-center">
                 <span>📞 +1 (555) 123-4567</span>
-                <span>✉️ contact@rhodehospital.com</span>
+                <span>✉️ contact@rhodehospital.ng</span>
               </div>
             </div>
           </motion.div>
@@ -69,24 +71,26 @@ export default function Navbar() {
 
       {/* Main Navbar */}
       <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-blue-800 flex items-center gap-2 hover:opacity-90 transition-opacity">
-          <span className="text-3xl">🏥</span> Rhode Hospital
+        <Link href="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
+          <Image src="/logo_rhode.jpg" alt="Rhode Hospital Logo" width={48} height={48} className="rounded-md object-contain" />
+          <span className="text-2xl font-bold" style={{ color: "var(--brand-navy)" }}>Rhode Hospital</span>
         </Link>
         
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 md:text-sm font-medium text-gray-700 items-center">
-          <Link href="/" className={`transition-colors ${pathname === "/" ? "text-blue-600 font-semibold" : "hover:text-blue-600"}`}>Home</Link>
-          <Link href="/staff-and-doctors" className={`transition-colors ${pathname === "/staff-and-doctors" ? "text-blue-600 font-semibold" : "hover:text-blue-600"}`}>Staff</Link>
-          <Link href="/appointments" className={`transition-colors ${pathname === "/appointments" ? "text-blue-600 font-semibold" : "hover:text-blue-600"}`}>Appointments</Link>
-          <Link href="/about-us" className={`transition-colors ${pathname === "/about-us" ? "text-blue-600 font-semibold" : "hover:text-blue-600"}`}>About Us</Link>
-          <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg transition-colors">
+          <Link href="/" className={`transition-colors ${pathname === "/" ? "font-semibold" : "hover:opacity-80"}`} style={pathname === "/" ? { color: "var(--brand-maroon)" } : {}}>Home</Link>
+          <Link href="/staff-and-doctors" className={`transition-colors ${pathname === "/staff-and-doctors" ? "font-semibold" : "hover:opacity-80"}`} style={pathname === "/staff-and-doctors" ? { color: "var(--brand-maroon)" } : {}}>Staff</Link>
+          <Link href="/appointments" className={`transition-colors ${pathname === "/appointments" ? "font-semibold" : "hover:opacity-80"}`} style={pathname === "/appointments" ? { color: "var(--brand-maroon)" } : {}}>Appointments</Link>
+          <Link href="/about-us" className={`transition-colors ${pathname === "/about-us" ? "font-semibold" : "hover:opacity-80"}`} style={pathname === "/about-us" ? { color: "var(--brand-maroon)" } : {}}>About Us</Link>
+          <Link href="/contact" className="text-white px-5 py-2.5 rounded-lg transition-colors hover:opacity-90" style={{ backgroundColor: "var(--brand-maroon)" }}>
             Contact Us
           </Link>
         </div>
         
         {/* Mobile menu button */}
         <button 
-          className="md:hidden text-gray-600 hover:text-blue-600 transition-colors p-2"
+          className="md:hidden text-gray-600 transition-colors p-2"
+          style={{ color: "var(--brand-navy)" }}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? (
@@ -112,11 +116,11 @@ export default function Navbar() {
             className="md:hidden absolute top-full left-0 w-full bg-white border-b border-gray-200 overflow-hidden shadow-lg z-50"
           >
             <div className="px-6 py-4 flex flex-col gap-4 shadow-inner">
-              <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className={`transition-colors ${pathname === "/" ? "text-blue-600 font-semibold" : "text-gray-700 hover:text-blue-600"}`}>Home</Link>
-              <Link href="/staff-and-doctors" onClick={() => setIsMobileMenuOpen(false)} className={`transition-colors ${pathname === "/staff-and-doctors" ? "text-blue-600 font-semibold" : "text-gray-700 hover:text-blue-600"}`}>Staff</Link>
-              <Link href="/appointments" onClick={() => setIsMobileMenuOpen(false)} className={`transition-colors ${pathname === "/appointments" ? "text-blue-600 font-semibold" : "text-gray-700 hover:text-blue-600"}`}>Appointments</Link>
-              <Link href="/about-us" onClick={() => setIsMobileMenuOpen(false)} className={`transition-colors ${pathname === "/about-us" ? "text-blue-600 font-semibold" : "text-gray-700 hover:text-blue-600"}`}>About Us</Link>
-              <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="bg-blue-600 hover:bg-blue-700 text-white text-center px-5 py-2.5 rounded-lg transition-colors mt-2">
+              <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className={`transition-colors ${pathname === "/" ? "font-semibold" : "text-gray-700"}`} style={pathname === "/" ? { color: "var(--brand-maroon)" } : {}}>Home</Link>
+              <Link href="/staff-and-doctors" onClick={() => setIsMobileMenuOpen(false)} className={`transition-colors ${pathname === "/staff-and-doctors" ? "font-semibold" : "text-gray-700"}`} style={pathname === "/staff-and-doctors" ? { color: "var(--brand-maroon)" } : {}}>Staff</Link>
+              <Link href="/appointments" onClick={() => setIsMobileMenuOpen(false)} className={`transition-colors ${pathname === "/appointments" ? "font-semibold" : "text-gray-700"}`} style={pathname === "/appointments" ? { color: "var(--brand-maroon)" } : {}}>Appointments</Link>
+              <Link href="/about-us" onClick={() => setIsMobileMenuOpen(false)} className={`transition-colors ${pathname === "/about-us" ? "font-semibold" : "text-gray-700"}`} style={pathname === "/about-us" ? { color: "var(--brand-maroon)" } : {}}>About Us</Link>
+              <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="text-white text-center px-5 py-2.5 rounded-lg transition-colors mt-2 hover:opacity-90" style={{ backgroundColor: "var(--brand-maroon)" }}>
                 Contact Us
               </Link>
             </div>

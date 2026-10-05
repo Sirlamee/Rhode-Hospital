@@ -118,14 +118,14 @@ export async function POST(req: NextRequest) {
 
     // 5. Auto-reply to sender
     await resend.emails.send({
-      from: "MedCare Hospital <noreply@medcarehospital.ng>",
+      from: "Rhode Hospital <noreply@rhodehospital.ng>",
       to: [email.trim()],
-      subject: "We received your message — MedCare Hospital",
+      subject: "We received your message — Rhode Hospital",
       html: `
         <p>Hi ${name.trim()},</p>
-        <p>Thank you for getting in touch. We've received your message and a member of our patient services team will respond within one business day.</p>
-        <p>If this is a medical emergency, please call our 24/7 emergency line: <strong>+234 800 911 0000</strong>.</p>
-        <p>Warm regards,<br/>MedCare Hospital Patient Services</p>
+        <p>Thank you for getting in touch. We've received your message and a member of our patient services team will respond promptly.</p>
+        <p>If this is a medical emergency, please call our 24/7 emergency line: <strong>+1 (555) 123-4567</strong>.</p>
+        <p>Warm regards,<br/>Rhode Hospital Patient Services</p>
       `,
     });
 

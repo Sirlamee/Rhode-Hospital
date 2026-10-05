@@ -30,7 +30,7 @@ export default function FloatingQuickActions() {
 
         <Link
           href="/patient/login"
-          className="group relative flex items-center justify-center w-14 h-14 bg-[#1D6FB8] text-white rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:bg-blue-700 hover:scale-110 hover:shadow-xl transition-all duration-300 ease-out"
+          className="group relative flex items-center justify-center w-14 h-14 text-white rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:scale-110 hover:shadow-xl transition-all duration-300 ease-out" style={{ backgroundColor: "var(--brand-maroon)" }}
           aria-label="Patient Portal"
         >
           <User size={24} />
@@ -62,7 +62,7 @@ export default function FloatingQuickActions() {
               <Link
                 href="/patient/login"
                 onClick={() => setIsOpen(false)}
-                className="flex items-center gap-3 bg-[#1D6FB8] shadow-[0_8px_30px_rgba(0,0,0,0.12)] rounded-full py-3 px-5 text-white font-medium text-sm active:scale-95 transition-transform"
+                className="flex items-center gap-3 shadow-[0_8px_30px_rgba(0,0,0,0.12)] rounded-full py-3 px-5 text-white font-medium text-sm active:scale-95 transition-transform" style={{ backgroundColor: "var(--brand-maroon)" }}
               >
                 <span>Patient Portal</span>
                 <User size={18} />
@@ -73,7 +73,7 @@ export default function FloatingQuickActions() {
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`flex items-center justify-center w-14 h-14 rounded-full shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300 ease-out active:scale-95 ${isOpen ? 'bg-gray-800 text-white rotate-135' : 'bg-[#1D6FB8] text-white hover:bg-blue-700'}`}
+          className={`flex items-center justify-center w-14 h-14 rounded-full shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300 ease-out active:scale-95 ${isOpen ? 'bg-gray-800 text-white rotate-135' : 'text-white'}`} style={isOpen ? {} : { backgroundColor: "var(--brand-maroon)" }}
           aria-label="Quick Actions Menu"
         >
           <Plus size={28} />

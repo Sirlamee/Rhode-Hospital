@@ -7,10 +7,10 @@ export default function ContactInformation() {
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         {/* Header */}
         <div className="text-center max-w-2xl mb-16">
-          <span className="inline-block font-sans text-xs font-semibold tracking-[0.12em] uppercase text-[#1D6FB8] mb-3">
+          <span className="inline-block font-sans text-xs font-semibold tracking-[0.12em] uppercase mb-3" style={{ color: "var(--brand-maroon)" }}>
             Get in Touch
           </span>
-          <h2 id="contact-info-title" className="font-serif text-[clamp(32px,4vw,48px)] font-normal text-[#0B2545] m-0 mb-5 leading-[1.2]">
+          <h2 id="contact-info-title" className="font-serif text-[clamp(32px,4vw,48px)] font-normal m-0 mb-5 leading-[1.2]" style={{ color: "var(--brand-navy)" }}>
             We&apos;re Here to Help
           </h2>
           <p className="font-sans text-base text-[#4B6280] leading-[1.6]">
@@ -30,27 +30,29 @@ export default function ContactInformation() {
             {
               icon: MapPin,
               title: "Our Location",
-              detail1: "123 Health Ave, Medical District",
-              detail2: "Cityville, State 12345",
+              detail1: "21, Ajobiaro Street, off Popoola St",
+              detail2: "Ile-Ise B/Stop, Igando Rd, Ikotun",
             },
             {
               icon: Mail,
               title: "Email Support",
-              detail1: "support@rhodehospital.org",
-              detail2: "info@rhodehospital.org",
+              detail1: "support@rhodehospital.ng",
+              detail2: "info@rhodehospital.ng",
             },
             {
               icon: Clock,
-              title: "Visiting Hours",
-              detail1: "Mon-Sun: 8:00 AM - 8:00 PM",
-              detail2: "Emergency: 24/7",
+              title: "Opening Hours",
+              detail1: "Everyday: 24 Hours",
+              detail2: "Emergency: Open 24/7",
             }
           ].map((item, index) => (
             <div key={index} className="flex flex-col items-center text-center p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
-              <div className="w-14 h-14 bg-blue-100 text-[#1D6FB8] rounded-full flex items-center justify-center mb-6 group-hover:bg-[#1D6FB8] group-hover:text-white transition-colors duration-300">
+              <div className="w-14 h-14 rounded-full flex items-center justify-center mb-6 group-hover:text-white transition-colors duration-300" style={{ backgroundColor: "var(--brand-maroon-pale)", color: "var(--brand-maroon)" }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--brand-maroon)'; (e.currentTarget as HTMLElement).style.color = 'white'; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--brand-maroon-pale)'; (e.currentTarget as HTMLElement).style.color = 'var(--brand-maroon)'; }}>
                 <item.icon size={24} />
               </div>
-              <h3 className="font-sans text-lg font-semibold text-[#0B2545] mb-3">{item.title}</h3>
+              <h3 className="font-sans text-lg font-semibold mb-3" style={{ color: "var(--brand-navy)" }}>{item.title}</h3>
               <p className="font-sans text-sm text-[#4B6280] leading-relaxed">
                 {item.detail1}<br />
                 {item.detail2}
@@ -60,8 +62,8 @@ export default function ContactInformation() {
         </div>
 
         {/* CTA */}
-        <div className="text-center w-full max-w-3xl bg-[#F0F7FF] rounded-3xl p-10 md:p-14 border border-[#DAEAF8] shadow-[0_8px_30px_rgba(13,71,161,0.06)]">
-          <h3 className="font-serif text-[clamp(24px,3vw,32px)] text-[#0B2545] mb-4">
+        <div className="text-center w-full max-w-3xl rounded-3xl p-10 md:p-14 border shadow-[0_8px_30px_rgba(5,50,73,0.08)]" style={{ backgroundColor: "var(--brand-navy-pale)", borderColor: "#b0cdd8" }}>
+          <h3 className="font-serif text-[clamp(24px,3vw,32px)] mb-4" style={{ color: "var(--brand-navy)" }}>
             Need more detailed assistance?
           </h3>
           <p className="font-sans text-[#4B6280] mb-8 max-w-xl mx-auto">
@@ -69,7 +71,7 @@ export default function ContactInformation() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-[#1D6FB8] text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 text-white px-8 py-4 rounded-full font-semibold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 hover:opacity-90" style={{ backgroundColor: "var(--brand-maroon)" }}
           >
             Contact Us
             <ArrowRight size={18} />

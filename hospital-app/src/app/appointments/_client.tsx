@@ -81,7 +81,7 @@ export default function AppointmentsClient() {
   return (
     <main className="bg-white min-h-screen">
       {/* ── Page Hero ── */}
-      <section className="bg-linear-to-br from-blue-600 via-blue-700 to-blue-800 py-20 px-6 text-center">
+      <section className="py-20 px-6 text-center" style={{ background: `linear-gradient(to bottom right, var(--brand-navy), var(--brand-navy-mid), var(--brand-navy-dark))` }}>
         <motion.div
           initial="hidden"
           animate="visible"
@@ -94,7 +94,7 @@ export default function AppointmentsClient() {
           <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
             Book Your Appointment Through Our Patient Portal
           </h1>
-          <p className="text-blue-100 text-lg md:text-xl leading-relaxed font-medium max-w-2xl mx-auto">
+          <p className="text-white/80 text-lg md:text-xl leading-relaxed font-medium max-w-2xl mx-auto">
             All appointments at Rhode Hospital are securely managed through our
             dedicated Patient Portal — giving you faster access, real-time
             availability, and a more personalised booking experience.
@@ -137,7 +137,8 @@ export default function AppointmentsClient() {
         >
           {/* Spine line */}
           <span
-            className="absolute left-6 top-0 bottom-0 w-0.5 bg-linear-to-b from-blue-400 via-blue-200 to-transparent"
+            className="absolute left-6 top-0 bottom-0 w-0.5"
+            style={{ background: `linear-gradient(to bottom, var(--brand-maroon), #e8b4b4, transparent)` }}
             aria-hidden="true"
           />
 
@@ -152,7 +153,7 @@ export default function AppointmentsClient() {
                 className={`relative flex items-start gap-6 ${isLast ? "pb-0" : "pb-10"}`}
               >
                 {/* Node */}
-                <div className="relative z-10 shrink-0 w-12 h-12 rounded-full bg-blue-600 border-4 border-white shadow-md flex items-center justify-center text-white font-extrabold text-lg select-none">
+                <div className="relative z-10 shrink-0 w-12 h-12 rounded-full border-4 border-white shadow-md flex items-center justify-center text-white font-extrabold text-lg select-none" style={{ backgroundColor: "var(--brand-maroon)" }}>
                   {index + 1}
                 </div>
 
@@ -160,10 +161,11 @@ export default function AppointmentsClient() {
                 <div className="flex-1 pt-1 group">
                   <div className="flex items-center gap-2.5 mb-2">
                     <Icon
-                      className="w-5 h-5 text-blue-500 shrink-0"
+                      className="w-5 h-5 shrink-0"
                       aria-hidden="true"
+                      style={{ color: "var(--brand-maroon)" }}
                     />
-                    <h3 className="text-base font-extrabold text-slate-900 leading-snug group-hover:text-blue-700 transition-colors">
+                    <h3 className="text-base font-extrabold text-slate-900 leading-snug group-hover:opacity-80 transition-opacity">
                       {step.title}
                     </h3>
                   </div>
@@ -186,7 +188,7 @@ export default function AppointmentsClient() {
         >
           <Link
             href="/patient/login"
-            className="inline-flex items-center gap-2.5 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-10 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            className="inline-flex items-center gap-2.5 text-white px-10 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 hover:opacity-90" style={{ backgroundColor: "var(--brand-maroon)", '--tw-ring-color': 'var(--brand-maroon)' } as React.CSSProperties}
             aria-label="Open the Rhode Hospital Patient Portal to book an appointment"
           >
             Open Patient Portal
@@ -215,7 +217,7 @@ export default function AppointmentsClient() {
             className="w-14 h-14 bg-white rounded-2xl border border-slate-200 flex items-center justify-center shadow-sm"
             aria-hidden="true"
           >
-            <HeadphonesIcon className="w-7 h-7 text-blue-500" aria-hidden="true" />
+            <HeadphonesIcon className="w-7 h-7" aria-hidden="true" style={{ color: "var(--brand-navy)" }} />
           </div>
 
           <h2
@@ -234,7 +236,7 @@ export default function AppointmentsClient() {
 
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 border-2 border-blue-600 text-blue-700 hover:bg-blue-600 hover:text-white px-8 py-3.5 rounded-xl font-semibold text-base transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            className="inline-flex items-center gap-2 border-2 text-white px-8 py-3.5 rounded-xl font-semibold text-base transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 hover:opacity-90" style={{ backgroundColor: "var(--brand-navy)", borderColor: "var(--brand-navy)", '--tw-ring-color': 'var(--brand-navy)' } as React.CSSProperties}
             aria-label="Contact Rhode Hospital support team"
           >
             Contact Us

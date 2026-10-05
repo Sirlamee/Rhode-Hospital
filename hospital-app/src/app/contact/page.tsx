@@ -25,26 +25,26 @@ const contactDetails = [
   {
     icon: MapPin,
     label: "Address",
-    value: "14 Healthcare Boulevard, Victoria Island, Lagos",
-    sub: "Open to walk-ins during business hours",
+    value: "21, Ajobiaro Street, off Popoola Street, Ile-Ise bus stop, Igando Road, Ikotun",
+    sub: "Open 24/7 for walk-ins and emergencies",
   },
   {
     icon: Phone,
     label: "Phone",
     value: "+234 800 MED CARE",
-    sub: "Mon – Fri, 8 am – 6 pm",
+    sub: "Available Everyday, 24 Hours",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "hello@medcarehospital.ng",
-    sub: "We reply within one business day",
+    value: "contact@rhodehospital.ng",
+    sub: "We reply promptly",
   },
   {
     icon: Clock,
-    label: "Emergency",
-    value: "24 / 7 Emergency Line",
-    sub: "+234 800 911 0000",
+    label: "Opening Hours",
+    value: "24 / 7 Everyday",
+    sub: "Emergency & General Care",
   },
 ];
 
@@ -52,10 +52,10 @@ export default function ContactPage() {
   return (
     <main className="font-sans text-[#0f172a]">
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden bg-linear-to-br from-[#0a1628] via-[#0f2340] to-[#0d2d5c] px-6 pt-[100px] pb-20 text-center">
+      <section className="relative overflow-hidden bg-linear-to-br from-[#0a1628] via-[#0f2340] to-[#0d2d5c] px-6 pt-25 pb-20 text-center">
         {/* inner content */}
-        <div className="relative z-10 mx-auto max-w-[640px]">
-          <span className="mb-6 inline-block rounded-full border border-[#4a90d9]/30 bg-[#4a90d9]/12 px-[14px] py-[5px] text-[11px] font-semibold uppercase tracking-[0.18em] text-[#4a90d9]">
+        <div className="relative z-10 mx-auto max-w-160">
+          <span className="mb-6 inline-block rounded-full border border-[#4a90d9]/30 bg-[#4a90d9]/12 px-3.5 py-1.25 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#4a90d9]">
             Get in touch
           </span>
 
@@ -65,7 +65,7 @@ export default function ContactPage() {
             when you need us.
           </h1>
 
-          <p className="mx-auto max-w-[500px] text-[1.05rem] leading-[1.7] text-white/65">
+          <p className="mx-auto max-w-125 text-[1.05rem] leading-[1.7] text-white/65">
             Whether it&rsquo;s a question about a service, a referral, or just
             finding your way around — reach out and our team will respond
             promptly.
@@ -77,15 +77,15 @@ export default function ContactPage() {
           className="pointer-events-none absolute inset-0 z-1 flex items-center justify-center"
           aria-hidden="true"
         >
-          <span className="pulse-ring absolute h-[320px] w-[320px] rounded-full border border-[#4a90d9]/18 [animation-delay:0s]" />
-          <span className="pulse-ring absolute h-[520px] w-[520px] rounded-full border border-[#4a90d9]/18 [animation-delay:1.2s]" />
-          <span className="pulse-ring absolute h-[720px] w-[720px] rounded-full border border-[#4a90d9]/18 [animation-delay:2.4s]" />
+          <span className="pulse-ring absolute h-80 w-80 rounded-full border border-[#4a90d9]/18 [animation-delay:0s]" />
+          <span className="pulse-ring absolute h-130 w-130 rounded-full border border-[#4a90d9]/18 [animation-delay:1.2s]" />
+          <span className="pulse-ring absolute h-180 w-180 rounded-full border border-[#4a90d9]/18 [animation-delay:2.4s]" />
         </div>
       </section>
 
       {/* ── Body ── */}
-      <section className="bg-[#f0f6ff] px-6 py-[72px]">
-        <div className="mx-auto grid max-w-[1120px] grid-cols-1 items-start gap-10 md:grid-cols-2 md:gap-14">
+      <section className="bg-[#f0f6ff] px-6 py-18">
+        <div className="mx-auto grid max-w-280 grid-cols-1 items-start gap-10 md:grid-cols-2 md:gap-14">
           {/* Left — info cards */}
           <aside>
             <p className="mb-8 text-[0.95rem] leading-[1.7] text-[#64748b]">
@@ -99,7 +99,7 @@ export default function ContactPage() {
                   key={label}
                   className="flex items-start gap-4 rounded-xl border border-[#e2eaf5] bg-white px-5 py-4 transition-shadow duration-200 hover:shadow-[0_4px_20px_rgba(26,68,128,0.08)]"
                 >
-                  <div className="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-[9px] border border-[#ddeeff] bg-[#f0f6ff] text-[#1d5fc4]">
+                  <div className="flex h-9.5 w-9.5 shrink-0 items-center justify-center rounded-[9px] border border-[#ddeeff] bg-[#f0f6ff] text-[#1d5fc4]">
                     <Icon size={18} strokeWidth={1.8} />
                   </div>
                   <div>
@@ -119,7 +119,7 @@ export default function ContactPage() {
             <div className="overflow-hidden rounded-xl border border-[#e2eaf5]">
               <iframe
                 title="Hospital location map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.7!2d3.4213!3d6.4281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjUnNDEuMiJOIDPCsDI1JzE2LjciRQ!5e0!3m2!1sen!2sng!4v1"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.8000574953367!2d3.2582989793457027!3d6.546912100000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8f8e3e398111%3A0x660751bb34e9db91!2sRhode%20Hospital%2C%20ikotun!5e0!3m2!1sen!2sng!4v1791224354091!5m2!1sen!2sng"
                 width="100%"
                 height="220"
                 style={{ border: 0 }}

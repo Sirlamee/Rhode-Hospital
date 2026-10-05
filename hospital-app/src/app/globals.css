@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
+:root {
+  --brand-navy:      #053249;
+  --brand-navy-dark: #021e2d;
+  --brand-navy-mid:  #07486a;
+  --brand-navy-pale: #dce8ee;
+  --brand-maroon:      #800000;
+  --brand-maroon-dark: #5c0000;
+  --brand-maroon-mid:  #9a1a1a;
+  --brand-maroon-pale: #f5e0e0;
+}
+
 h1,
 h2,
 h3,

@@ -90,7 +90,7 @@ export default function WhyChooseUs() {
           variants={headerVariants}
           className="flex flex-col items-center text-center mb-16 max-w-3xl"
         >
-          <span className="flex items-center bg-blue-100 text-blue-800 px-4 py-1.5 rounded-full text-sm font-bold tracking-wider uppercase mb-6 shadow-sm border border-blue-200">
+          <span className="flex items-center px-4 py-1.5 rounded-full text-sm font-bold tracking-wider uppercase mb-6 shadow-sm" style={{ backgroundColor: "var(--brand-maroon-pale)", color: "var(--brand-maroon)", border: "1px solid #e8b4b4" }}>
             <Activity className="w-4 h-4 mr-2" /> Why Choose Us
           </span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">
@@ -115,10 +115,10 @@ export default function WhyChooseUs() {
               variants={cardVariants}
               className="bg-white rounded-3xl p-8 border border-slate-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] hover:-translate-y-1.5 transition-all duration-300 group"
             >
-              <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-sm border border-blue-100">
-                <feature.icon className="w-8 h-8 text-blue-600" aria-hidden="true" />
+              <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-sm" style={{ backgroundColor: "var(--brand-maroon-pale)", border: "1px solid #e8b4b4" }}>
+                <feature.icon className="w-8 h-8" aria-hidden="true" style={{ color: "var(--brand-maroon)" }} />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-700 transition-colors">
+              <h3 className="text-xl font-bold text-slate-900 mb-3 transition-colors group-hover:opacity-80" style={{}}>
                 {feature.title}
               </h3>
               <p className="text-slate-600 leading-relaxed font-medium">

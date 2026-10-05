@@ -25,31 +25,31 @@ export interface HeroSlide {
 export const slides: HeroSlide[] = [
   {
     id: 1,
-    image: "/hero/image1.png",
+    image: "/hero/hero-one.png",
     title: "Welcome to Rhode Hospital",
     description: "Providing world-class healthcare with compassion and expertise.",
   },
   {
     id: 2,
-    image: "/hero/image2.png",
+    image: "/hero/hero-two.png",
     title: "Compassionate Care",
     description: "A friendly and welcoming environment for all our patients.",
   },
   {
     id: 3,
-    image: "/hero/image3.png",
+    image: "/hero/hero-three.png",
     title: "Expert Professionals",
     description: "Experienced doctors dedicated to your health and well-being.",
   },
   {
     id: 4,
-    image: "/hero/image4.png",
+    image: "/hero/hero-four.png",
     title: "Advanced Technology",
     description: "State of the art medical equipment for accurate diagnosis.",
   },
   {
     id: 5,
-    image: "/hero/image5.png",
+    image: "/hero/hero-five.png",
     title: "Comfortable Recovery",
     description: "Premium patient rooms designed for optimal comfort.",
   },

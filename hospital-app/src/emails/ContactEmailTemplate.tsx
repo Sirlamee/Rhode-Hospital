@@ -35,7 +35,7 @@ export function ContactEmailTemplate({
         <Container style={container}>
           {/* Header */}
           <Section style={header}>
-            <Text style={headerLabel}>MEDCARE HOSPITAL</Text>
+            <Text style={headerLabel}>RHODE HOSPITAL</Text>
             <Heading style={headerHeading}>New Contact Message</Heading>
           </Section>
 
@@ -76,7 +76,7 @@ export function ContactEmailTemplate({
           {/* Footer */}
           <Section style={footer}>
             <Text style={footerText}>
-              This email was sent via the contact form on medcarehospital.ng.
+              This email was sent via the contact form on rhodehospital.ng.
               Reply directly to this email to respond to {name}.
             </Text>
           </Section>

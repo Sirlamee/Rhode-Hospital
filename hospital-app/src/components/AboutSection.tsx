@@ -85,22 +85,22 @@ export default function AboutSection() {
   return (
     <section className="relative w-full min-h-screen md:h-screen flex flex-col justify-center overflow-hidden bg-gray-50/50">
       {/* Background Floating SVGs */}
-      <motion.div custom={0} variants={floatingVariants} animate="float" className="absolute top-24 left-[10%] text-blue-200/50 z-0">
+      <motion.div custom={0} variants={floatingVariants} animate="float" className="absolute top-24 left-[10%] text-red-200/30 z-0">
         <DnaIcon />
       </motion.div>
-      <motion.div custom={1} variants={floatingVariants} animate="float" className="absolute bottom-32 left-[20%] text-blue-200/50 z-0 scale-125">
+      <motion.div custom={1} variants={floatingVariants} animate="float" className="absolute bottom-32 left-[20%] text-red-200/30 z-0 scale-125">
         <HeartbeatIcon />
       </motion.div>
-      <motion.div custom={2} variants={floatingVariants} animate="float" className="absolute top-32 right-[15%] text-blue-200/50 z-0 scale-110">
+      <motion.div custom={2} variants={floatingVariants} animate="float" className="absolute top-32 right-[15%] text-red-200/30 z-0 scale-110">
         <CrossIcon />
       </motion.div>
-      <motion.div custom={1.5} variants={floatingVariants} animate="float" className="absolute bottom-24 right-[25%] text-blue-200/50 z-0 scale-150">
+      <motion.div custom={1.5} variants={floatingVariants} animate="float" className="absolute bottom-24 right-[25%] text-red-200/30 z-0 scale-150">
         <StethoscopeIcon />
       </motion.div>
-      <motion.div custom={0.5} variants={floatingVariants} animate="float" className="absolute top-1/2 left-[5%] text-blue-200/50 z-0">
+      <motion.div custom={0.5} variants={floatingVariants} animate="float" className="absolute top-1/2 left-[5%] text-red-200/30 z-0">
         <PillIcon />
       </motion.div>
-      <motion.div custom={2.5} variants={floatingVariants} animate="float" className="absolute top-[40%] right-[5%] text-blue-200/50 z-0 scale-125">
+      <motion.div custom={2.5} variants={floatingVariants} animate="float" className="absolute top-[40%] right-[5%] text-red-200/30 z-0 scale-125">
         <DnaIcon />
       </motion.div>
 
@@ -113,10 +113,10 @@ export default function AboutSection() {
           className="flex flex-col gap-6"
         >
           <div>
-            <h3 className="text-blue-600 font-bold uppercase tracking-wider text-sm mb-2 flex items-center gap-2">
+            <h3 className="font-bold uppercase tracking-wider text-sm mb-2 flex items-center gap-2" style={{ color: "var(--brand-maroon)" }}>
               <Activity className="w-4 h-4" />About Us 
             </h3>
-            <h2 className="text-4xl lg:text-5xl font-extrabold text-blue-900 leading-tight">
+            <h2 className="text-4xl lg:text-5xl font-extrabold leading-tight" style={{ color: "var(--brand-navy)" }}>
               Welcome to Rhode Hospital
             </h2>
           </div>
@@ -128,7 +128,7 @@ export default function AboutSection() {
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
             {bulletPoints.map((point, index) => (
               <li key={index} className="flex items-start gap-3">
-                <div className="mt-1 bg-blue-100 p-1 rounded-full text-blue-600 shrink-0">
+                <div className="mt-1 p-1 rounded-full shrink-0" style={{ backgroundColor: "var(--brand-maroon-pale)", color: "var(--brand-maroon)" }}>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
@@ -142,7 +142,7 @@ export default function AboutSection() {
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3.5 rounded-lg font-semibold transition-colors shadow-lg shadow-blue-600/30 flex items-center gap-2"
+              className="text-white px-8 py-3.5 rounded-lg font-semibold transition-all shadow-lg flex items-center gap-2 hover:opacity-90" style={{ backgroundColor: "var(--brand-maroon)" }}
             >
               Learn More About Us
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -160,8 +160,8 @@ export default function AboutSection() {
           className="relative w-full h-[60vh] md:h-[80%] flex items-center justify-center"
         >
           {/* Thick borders decorator */}
-          <div className="absolute top-0 right-0 w-3/4 h-3/4 border-t-8 border-r-16 border-blue-600 rounded-tr-3xl z-0 transition-all duration-500 hover:scale-105"></div>
-          <div className="absolute bottom-0 left-0 w-3/4 h-3/4 border-b-8 border-l-16 border-blue-900 rounded-bl-3xl z-0 transition-all duration-500 hover:scale-105"></div>
+          <div className="absolute top-0 right-0 w-3/4 h-3/4 border-t-8 border-r-16 rounded-tr-3xl z-0 transition-all duration-500 hover:scale-105" style={{ borderColor: "var(--brand-maroon)" }}></div>
+          <div className="absolute bottom-0 left-0 w-3/4 h-3/4 border-b-8 border-l-16 rounded-bl-3xl z-0 transition-all duration-500 hover:scale-105" style={{ borderColor: "var(--brand-navy)" }}></div>
           
           {/* Image Container */}
           <div className="absolute inset-4 sm:inset-6 md:inset-8 z-10 overflow-hidden rounded-2xl shadow-2xl bg-white">

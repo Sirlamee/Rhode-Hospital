@@ -315,7 +315,7 @@ const formStyles = `
     color: #334155;
     letter-spacing: 0.01em;
   }
-  .cf__label span[aria-hidden] { color: #1d5fc4; }
+  .cf__label span[aria-hidden] { color: #800000; }
   .cf__label-optional { font-weight: 400; color: #94a3b8; }
 
   .cf__input {
@@ -333,9 +333,9 @@ const formStyles = `
   }
   .cf__input::placeholder { color: #94a3b8; }
   .cf__input:focus {
-    border-color: #1d5fc4;
+    border-color: #800000;
     background: #fff;
-    box-shadow: 0 0 0 3px rgba(29, 95, 196, 0.12);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.12);
   }
   .cf__input--error {
     border-color: #e53e3e;
@@ -381,7 +381,7 @@ const formStyles = `
     justify-content: center;
     gap: 8px;
     padding: 12px 28px;
-    background: #1d5fc4;
+    background: #800000;
     color: #fff;
     border: none;
     border-radius: 9px;
@@ -393,11 +393,11 @@ const formStyles = `
     letter-spacing: 0.01em;
   }
   .cf-btn--full { width: 100%; }
-  .cf-btn:hover:not(:disabled) { background: #1a4fa8; }
+  .cf-btn:hover:not(:disabled) { background: #5c0000; }
   .cf-btn:active:not(:disabled) { transform: translateY(1px); }
   .cf-btn:disabled { opacity: 0.65; cursor: not-allowed; }
   .cf-btn:focus-visible {
-    outline: 3px solid rgba(29, 95, 196, 0.4);
+    outline: 3px solid rgba(128, 0, 0, 0.4);
     outline-offset: 2px;
   }
 
@@ -418,7 +418,7 @@ const successStyles = `
     padding: 24px 16px;
     gap: 12px;
   }
-  .cf-success__icon { color: #1d5fc4; }
+  .cf-success__icon { color: #800000; }
   .cf-success__heading {
     font-size: 1.3rem;
     font-weight: 700;
