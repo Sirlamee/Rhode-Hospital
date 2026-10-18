@@ -4,20 +4,20 @@ import AboutUsClient from "./_client";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Rhode Hospital's history, mission, vision, and core values. Founded in 1998, we have grown into a leading international medical centre serving over 1 million patients.",
+    "Learn about Rhode Hospital's mission, values, and 5+ years of dedicated service providing compassionate, high-quality healthcare across our 7+ specialized departments in Ikotun, Lagos.",
   alternates: {
     canonical: "/about-us",
   },
   openGraph: {
     title: "About Us | Rhode Hospital",
     description:
-      "Discover Rhode Hospital's 25+ year legacy of compassionate, world-class healthcare across 40+ specialties.",
+      "Discover Rhode Hospital's 5+ years of compassionate healthcare, modern diagnostics, and patient-centered clinical excellence in Ikotun, Lagos.",
     url: "https://www.rhodehospital.com/about-us",
   },
   twitter: {
     title: "About Us | Rhode Hospital",
     description:
-      "Discover Rhode Hospital's 25+ year legacy of compassionate, world-class healthcare across 40+ specialties.",
+      "Discover Rhode Hospital's 5+ years of compassionate healthcare, modern diagnostics, and patient-centered clinical excellence in Ikotun, Lagos.",
   },
 };
 

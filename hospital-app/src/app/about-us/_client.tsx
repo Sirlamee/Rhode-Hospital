@@ -8,11 +8,11 @@ import { Target, Eye, Heart, Award, Shield, Lightbulb, Users, UserCheck, CheckCi
 
 // --- Data ---
 const milestones = [
-  { year: "1998", title: "Hospital Founded", description: "Rhode Hospital opened its doors with a mission to provide exceptional care." },
-  { year: "2005", title: "New Wing Expanded", description: "Added the state-of-the-art cardiovascular and neurology departments." },
-  { year: "2012", title: "Research Center", description: "Launched our dedicated medical research and clinical trials center." },
-  { year: "2018", title: "Tech Integration", description: "Implemented fully digital patient records and robotic surgery assistance." },
-  { year: "2023", title: "Global Recognition", description: "Awarded top 100 international hospitals for patient safety and care quality." },
+  { year: "2020", title: "Hospital Founded", description: "Rhode Hospital opened its doors in Ikotun, Lagos, with a mission to deliver accessible, high-quality healthcare." },
+  { year: "2021", title: "Inpatient & Laboratory Expansion", description: "Expanded our inpatient ward capacity and commissioned our advanced diagnostic laboratory facilities." },
+  { year: "2022", title: "Surgical Theater & Pharmacy", description: "Established our modern surgical suite and fully stocked 24/7 on-site dispensary." },
+  { year: "2023", title: "HMO & Insurance Partnerships", description: "Partnered with reputable Health Maintenance Organizations (HMOs) to provide seamless insured care." },
+  { year: "2024", title: "Digital Patient Portal", description: "Launched our secure online Patient Portal for fast, personalized appointment booking and records." },
 ];
 
 const coreValues = [
@@ -33,7 +33,7 @@ const faqData = [
   },
   {
     question: "Which insurance plans do you accept?",
-    answer: "We accept most major insurance plans, including Medicare and Medicaid. We recommend contacting your insurance provider or our billing department for specific coverage details."
+    answer: "We accept most major Health Maintenance Organizations (HMOs) and private health insurance schemes. Please contact our HMO desk or front desk for quick pre-authorization and verification."
   },
   {
     question: "How can I access my medical records?",
@@ -41,7 +41,7 @@ const faqData = [
   },
   {
     question: "Is parking available at the hospital?",
-    answer: "Yes, we offer a multi-level parking garage for patients and visitors, with valet parking services available at the main entrance."
+    answer: "Yes, we provide secure and convenient on-site parking for all patients and visitors."
   }
 ];
 
@@ -76,21 +76,11 @@ export default function AboutUsClient() {
     <main className="min-h-screen bg-white">
       {/* 1. Hero Section */}
       <section className="relative w-full h-screen flex flex-col justify-center items-center overflow-hidden">
-        <div className="absolute inset-0 z-0" style={{ backgroundColor: "var(--brand-navy)" }}>
-          <Image src="/hero/hero-one.png" alt="Rhode Hospital" fill className="object-cover opacity-60 mix-blend-overlay" priority />
+        <div className="absolute inset-0 z-0" style={{ backgroundColor: "rgb(5, 50, 73, 0.5)" }}>
+          <Image src="/hero/hero-five.png" alt="Rhode Hospital" fill className="object-cover opacity-60 mix-blend-overlay" priority />
         </div>
         
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex items-center gap-2 text-white/80 font-bold mb-6 uppercase tracking-widest text-sm bg-black/20 px-4 py-2 rounded-full backdrop-blur-sm"
-          >
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <ChevronRight className="w-4 h-4" />
-            <span className="text-white">About Us</span>
-          </motion.div>
           
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
@@ -127,18 +117,18 @@ export default function AboutUsClient() {
               A Legacy of Excellence in Healthcare
             </h2>
             <p className="text-slate-600 text-lg leading-relaxed font-medium mt-2">
-              Founded in 1998, Rhode Hospital has grown from a small community clinic into a leading international medical center. We offer specialized care across more than 40 departments, ensuring that every patient receives personalized, state-of-the-art treatment.
+              With over 5 years of dedicated service, Rhode Hospital has grown into a trusted community healthcare facility in Ikotun, Lagos. We provide comprehensive, compassionate care across our 7+ specialized units, ensuring every patient receives personalized attention and clinical excellence.
             </p>
             <p className="text-slate-600 text-lg leading-relaxed font-medium">
-              Our dedicated professionals work tirelessly to bring healing, comfort, and hope. By combining advanced technology with a deeply human touch, we continue to set new standards in patient care and clinical outcomes.
+              Our team of experienced doctors, registered nurses, and diagnostic professionals works tirelessly to bring healing, comfort, and peace of mind to our community with every visit.
             </p>
             
             <div className="grid grid-cols-2 gap-6 mt-8">
               {[
-                { label: "Years of Service", value: "25+" },
-                { label: "Specialized Depts", value: "40+" },
-                { label: "Medical Specialists", value: "150+" },
-                { label: "Patients Served", value: "1M+" },
+                { label: "Years of Service", value: "5+" },
+                { label: "Specialized Depts", value: "7+" },
+                { label: "Medical Specialists", value: "5+" },
+                { label: "Patients Served", value: "50K+" },
               ].map((stat, i) => (
                 <div key={i} className="p-6 rounded-2xl border flex flex-col justify-center items-center text-center shadow-sm hover:shadow-md transition-shadow" style={{ backgroundColor: "rgba(128,0,0,0.04)", borderColor: "#e8b4b4" }}>
                   <span className="text-3xl font-extrabold mb-1" style={{ color: "var(--brand-maroon)" }}>{stat.value}</span>
@@ -161,7 +151,13 @@ export default function AboutUsClient() {
             
             {/* Image Container */}
             <div className="absolute inset-4 sm:inset-6 md:inset-8 z-10 overflow-hidden rounded-2xl shadow-2xl bg-white">
-              <Image src="/about_overview.png" alt="Doctor and Patient" fill className="object-cover transition-transform duration-700 hover:scale-110" />
+              <Image
+                src="/hospital_about.jpg"
+                alt="Rhode Hospital Healthcare Facility"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover transition-transform duration-700 hover:scale-110"
+              />
             </div>
           </motion.div>
         </div>

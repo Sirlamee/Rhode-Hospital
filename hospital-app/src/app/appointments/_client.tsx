@@ -187,7 +187,9 @@ export default function AppointmentsClient() {
           className="mt-16 flex flex-col items-center gap-3 text-center"
         >
           <Link
-            href="/patient/login"
+            href="https://backroom.rhodehospital.com/portal/login"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2.5 text-white px-10 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 hover:opacity-90" style={{ backgroundColor: "var(--brand-maroon)", '--tw-ring-color': 'var(--brand-maroon)' } as React.CSSProperties}
             aria-label="Open the Rhode Hospital Patient Portal to book an appointment"
           >

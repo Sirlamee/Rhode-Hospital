@@ -302,14 +302,16 @@ function StaffCard({
                 {member.email}
               </a>
             </span>
-            <span className="flex items-center gap-1.5">
-              <BookOpen
-                className="w-4 h-4 shrink-0"
-                aria-hidden="true"
-                style={{ color: "var(--brand-maroon-mid)" }}
-              />
-              <span>{member.languages}</span>
-            </span>
+            {member.languages && (
+              <span className="flex items-center gap-1.5">
+                <BookOpen
+                  className="w-4 h-4 shrink-0"
+                  aria-hidden="true"
+                  style={{ color: "var(--brand-maroon-mid)" }}
+                />
+                <span>{member.languages}</span>
+              </span>
+            )}
           </div>
 
           {/* Full bio paragraphs */}

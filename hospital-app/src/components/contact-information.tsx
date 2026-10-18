@@ -36,8 +36,7 @@ export default function ContactInformation() {
             {
               icon: Mail,
               title: "Email Support",
-              detail1: "support@rhodehospital.ng",
-              detail2: "info@rhodehospital.ng",
+              detail1: "contact@rhodehospital.ng",
             },
             {
               icon: Clock,

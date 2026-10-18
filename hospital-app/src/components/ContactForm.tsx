@@ -204,7 +204,7 @@ export default function ContactForm() {
             id={`${id}-subject`}
             name="subject"
             type="text"
-            placeholder="e.g. Question about cardiology unit"
+            placeholder="e.g. Question about consultation or lab tests"
             value={form.subject}
             onChange={handleChange}
             aria-invalid={!!errors.subject}

@@ -20,8 +20,8 @@ export interface StaffMember {
   roles: string[];
   department: string;
   specialty: string;
-  qualifications: string;
-  languages: string;
+  qualifications?: string;
+  languages?: string;
   email: string;
   /** Path relative to /public, e.g. "/staff/dejidoctor.jpg" or null if anonymous */
   image: string | null;
@@ -54,11 +54,10 @@ export const doctors: StaffMember[] = [
     roles: ["Medical Director", "Doctor"],
     department: "Internal Medicine",
     specialty: "Internal Medicine & Clinical Leadership",
-    qualifications:
-      "MBBS, FWACP (Internal Medicine), Certified Healthcare Operations",
+    qualifications: "MBBS",
     languages: "English, Yoruba",
     email: "medicsjibril@gmail.com",
-    image: null,
+    image: "/staff/odebiyi-jibril.jpeg",
     bio: [
       "Dr. Jubril Odebiyi is the Medical Director and Consultant Physician in Internal Medicine at Rhode Hospital. As the clinical head of the hospital, Dr. Jubril steers medical governance, clinical quality assurance, and healthcare operations across all medical units.",
       "In clinical practice, Dr. Jubril delivers comprehensive diagnostic evaluations and evidence-based treatment plans for acute and chronic internal medical conditions.",
@@ -77,18 +76,17 @@ export const doctors: StaffMember[] = [
     roles: ["Doctor"],
     department: "Internal Medicine",
     specialty: "Internal Medicine & Oncology Focus",
-    qualifications:
-      "MBBS, FWACP (Internal Medicine), Fellowship in Interventional Medicine",
+    qualifications: "MBBS",
     languages: "English, Yoruba",
     email: "oladeji.salami1234@gmail.com",
-    image: "/staff/dejidoctor.jpg",
+    image: "/staff/salami-oladeji.jpeg",
     bio: [
-      "Dr. Oladeji Salami is an experienced physician in Internal Medicine and an Aspiring Onchologist at Rhode Hospital. He delivers exemplary clinical diagnosis, chronic disease management, and compassionate patient care across diverse adult medical conditions.",
+      "Dr. Oladeji Salami is an experienced physician in Internal Medicine and an Aspiring Oncologist at Rhode Hospital. He delivers exemplary clinical diagnosis, chronic disease management, and compassionate patient care across diverse adult medical conditions.",
       "With deep clinical interest and ongoing focus in oncology and internal medicine, Dr. Salami is dedicated to advancing cancer care, early disease detection, and holistic patient support.",
       "He strongly advocates for patient education and proactive preventative medicine, taking time to guide patients and their families through personalized treatment and recovery plans.",
     ],
     achievements: [
-      "Consultant Physician in Internal Medicine & Aspiring Onchologist",
+      "Consultant Physician in Internal Medicine & Aspiring Oncologist",
       "Fellow of the West African College of Physicians (FWACP)",
       "Distinguished clinical background in internal and preventative healthcare",
       "Champion of Compassionate, Patient-Centered Clinical Care",
@@ -103,7 +101,7 @@ export const doctors: StaffMember[] = [
     qualifications: "Registered Nurse (RN), Registered Midwife (RM)",
     languages: "English, Yoruba",
     email: "waladetemia@gmail.com",
-    image: "/staff/waliyat.jpeg",
+    image: "/staff/adejumo-waliyat.jpeg",
     bio: [
       "Adejumo Waliyat is a dedicated Registered Nurse in the Department of Internal Medicine at Rhode Hospital. She brings extensive experience in administering prescribed medical regimens, monitoring inpatient vital parameters, and delivering compassionate bedside support.",
       "Nurse Waliyat specializes in adult patient care, health education, and emergency triage. Her patient-centered methodology ensures patients and their families feel informed, comforted, and supported throughout the healing journey.",
@@ -123,7 +121,7 @@ export const doctors: StaffMember[] = [
     qualifications: "Registered Nurse (RN)",
     languages: "English, Yoruba",
     email: "aminatbiobaku4@gmail.com",
-    image: null,
+    image: "/staff/biobaku-olawunmi.jpeg",
     bio: [
       "Biobaku Aminat is an empathetic Registered Nurse serving in the Internal Medicine ward at Rhode Hospital. She is responsible for direct patient assessment, medication management, and supporting diagnostic procedures.",
       "With a keen eye for patient comfort and safety, Nurse Aminat works collaboratively with physicians and specialists to guarantee seamless post-admission care and rapid patient recovery.",
@@ -143,7 +141,7 @@ export const doctors: StaffMember[] = [
     qualifications: "Registered Nurse (RN)",
     languages: "English, Yoruba",
     email: "owolabisuliat22@gmail.com",
-    image: null,
+    image: "/staff/owolabi-suliat.jpeg",
     bio: [
       "Owolabi Suliat is a compassionate and skilled Registered Nurse at Rhode Hospital. Working within Internal Medicine, she delivers personalized nursing care, ensures strict adherence to clinical care plans, and monitors patient vitals.",
       "Nurse Suliat is known for her calm demeanor, prompt clinical responsiveness, and dedication to maintaining high standards of clinical hygiene and patient safety.",
@@ -163,7 +161,7 @@ export const doctors: StaffMember[] = [
     qualifications: "Registered Nurse (RN), Registered Midwife (RM)",
     languages: "English, Yoruba",
     email: "ibukunoluwaakinwunmi@gmail.com",
-    image: null,
+    image: "/staff/akinwunmi-precious.jpeg",
     bio: [
       "Precious Akinwunmi is an accomplished Registered Nurse with extensive experience in clinical nursing and patient rehabilitation in the Internal Medicine department.",
       "She excels in managing therapeutic interventions, counseling patients on post-discharge self-care, and coordinating multi-disciplinary ward routines with warmth and clinical precision.",
@@ -180,11 +178,9 @@ export const doctors: StaffMember[] = [
     roles: ["Pharmacist", "Lab Tech"],
     department: "Pharmacy & Diagnostic Laboratory",
     specialty: "Pharmaceuticals & Diagnostic Testing",
-    qualifications:
-      "B.Pharm, Certified Medical Laboratory Technician (MLT)",
     languages: "English, Yoruba, Igbo",
     email: "igwebuikeadeola@gmail.com",
-    image: null,
+    image: "/staff/samuel-adeola.jpeg",
     bio: [
       "Samuel Adeola is a multi-disciplinary healthcare practitioner serving as a Pharmacist and Medical Laboratory Technician at Rhode Hospital. He oversees the safe dispensing of medications, prescription audits, and accurate diagnostic laboratory evaluations.",
       "His dual expertise in pharmaceutical care and clinical diagnostics provides crucial support to doctors in establishing precise diagnoses and optimal medication therapies.",
@@ -197,15 +193,13 @@ export const doctors: StaffMember[] = [
   },
   {
     id: "kolade-abdulganiyu",
-    name: "Kolade AbdulGaniyu",
+    name: "Kolade AbdulGaniyu", 
     roles: ["Billing Officer"],
     department: "Hospital Administration & Billing",
     specialty: "Hospital Billing & Patient Accounts",
-    qualifications:
-      "B.Sc Health Information Management / IT, ITIL Certified",
-    languages: "English, Yoruba",
+    languages: "English, Yoruba, Hausa",
     email: "success4myfuture@gmail.com",
-    image: null,
+    image: "/staff/kolad-abdulganiyu.jpeg",
     bio: [
       "Kolade AbdulGaniyu manages hospital billing operations and financial workflows at Rhode Hospital. He ensures the security, accuracy, and efficiency of patient account records and payment procedures.",
       "His expertise in billing management and data accuracy facilitates frictionless patient account reconciliation and transparent administrative service for all patients.",
@@ -222,7 +216,6 @@ export const doctors: StaffMember[] = [
     roles: ["Receptionist", "HMO Officer"],
     department: "Patient Relations & HMO Desk",
     specialty: "Front Desk Operations & HMO Coordination",
-    qualifications: "B.Sc / Diploma in Health Administration & Public Relations",
     languages: "English, Yoruba",
     email: "kamalideenoyero30@gmail.com",
     image: "/staff/oyero.jpg",
@@ -248,15 +241,15 @@ export const specialists: Specialist[] = [
     roles: ["Medical Director", "Doctor"],
     specialty: "Internal Medicine & Clinical Leadership",
     bio: "Medical Director and Consultant Physician leading medical governance, comprehensive diagnostic care, and clinical excellence.",
-    image: null,
+    image: "/staff/odebiyi-jibril.jpeg",
     profileHref: "/staff-and-doctors#odebiyi-jubril",
   },
   {
     name: "Dr. Oladeji Salami",
     roles: ["Doctor"],
     specialty: "Internal Medicine & Oncology Focus",
-    bio: "Experienced physician in Internal Medicine and an Aspiring Onchologist delivering exemplary diagnostic care and compassionate disease management.",
-    image: "/staff/dejidoctor.jpg",
+    bio: "Experienced physician in Internal Medicine and an Aspiring Oncologist delivering exemplary diagnostic care and compassionate disease management.",
+    image: "/staff/salami-oladeji.jpeg",
     profileHref: "/staff-and-doctors#oladeji-salami",
   },
   {
@@ -264,7 +257,7 @@ export const specialists: Specialist[] = [
     roles: ["Nurse"],
     specialty: "Clinical Nursing & Patient Care",
     bio: "Compassionate Registered Nurse delivering comprehensive inpatient nursing, vital monitoring, and patient wellness education.",
-    image: "/staff/waliyat.jpeg",
+    image: "/staff/adejumo-waliyat.jpeg",
     profileHref: "/staff-and-doctors#adejumo-waliyat",
   },
   {
@@ -272,7 +265,7 @@ export const specialists: Specialist[] = [
     roles: ["Pharmacist", "Lab Tech"],
     specialty: "Pharmacy & Diagnostic Laboratory",
     bio: "Multi-skilled professional managing pharmaceutical dispensing, medication safety, and clinical diagnostic lab testing.",
-    image: null,
+    image: "/staff/samuel-adeola.jpeg",
     profileHref: "/staff-and-doctors#samuel-adeola",
   },
 ];

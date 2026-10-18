@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 :root {
-  --brand-navy:      #053249;
+  --brand-navy:      rgb(5, 50, 73);
   --brand-navy-dark: #021e2d;
   --brand-navy-mid:  #07486a;
   --brand-navy-pale: #dce8ee;
