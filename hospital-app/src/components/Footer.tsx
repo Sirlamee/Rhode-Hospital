@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <Image src="/logo_rhode.jpg" alt="Rhode Hospital Logo" width={48} height={48} className="rounded-md object-contain" />
+            <Image src="/logo_rhode.webp" alt="Rhode Hospital Logo" width={48} height={48} className="rounded-md object-contain" />
             <h3 className="text-2xl font-bold text-white">Rhode Hospital</h3>
           </div>
           <p className="text-gray-400 leading-relaxed mb-4">

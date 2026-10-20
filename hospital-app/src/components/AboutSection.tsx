@@ -166,7 +166,7 @@ export default function AboutSection() {
           {/* Image Container */}
           <div className="absolute inset-4 sm:inset-6 md:inset-8 z-10 overflow-hidden rounded-2xl shadow-2xl bg-white">
             <Image 
-              src="/hospital_about.jpg"
+              src="/hospital_about.webp"
               alt="Rhode Hospital Interior"
               fill
               className="object-cover transition-transform duration-700 hover:scale-110"

@@ -77,7 +77,7 @@ export default function AboutUsClient() {
       {/* 1. Hero Section */}
       <section className="relative w-full h-screen flex flex-col justify-center items-center overflow-hidden">
         <div className="absolute inset-0 z-0" style={{ backgroundColor: "rgb(5, 50, 73, 0.5)" }}>
-          <Image src="/hero/hero-five.png" alt="Rhode Hospital" fill className="object-cover opacity-60 mix-blend-overlay" priority />
+          <Image src="/hero/hero-five.webp" alt="Rhode Hospital" fill sizes="100vw" className="object-cover opacity-60 mix-blend-overlay" priority />
         </div>
         
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center">
@@ -152,7 +152,7 @@ export default function AboutUsClient() {
             {/* Image Container */}
             <div className="absolute inset-4 sm:inset-6 md:inset-8 z-10 overflow-hidden rounded-2xl shadow-2xl bg-white">
               <Image
-                src="/hospital_about.jpg"
+                src="/hospital_about.webp"
                 alt="Rhode Hospital Healthcare Facility"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

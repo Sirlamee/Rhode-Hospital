@@ -11,7 +11,6 @@ export default function HeroCarousel() {
   const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(1);
-  const [hasPlayedMap, setHasPlayedMap] = useState<Record<number, boolean>>({});
   const [isFirstLoadComplete, setIsFirstLoadComplete] = useState(false);
 
   useEffect(() => {
@@ -30,7 +29,7 @@ export default function HeroCarousel() {
     const timer = setInterval(() => {
       setDirection(1);
       setCurrentIndex((prev) => prev + 1);
-    }, 5000); // 5 seconds per slide
+    }, 10000); // 10 seconds per slide
     
     return () => clearInterval(timer);
   }, [currentIndex]);
@@ -48,11 +47,6 @@ export default function HeroCarousel() {
       setCurrentIndex((prev) => prev - 1);
     }
   };
-
-  useEffect(() => {
-    // Mark the current index as played so it only animates once if required
-    setHasPlayedMap(prev => ({ ...prev, [currentIndex]: true }));
-  }, [currentIndex]);
 
   // Framer motion variants
   const slideVariants: Variants = {
@@ -114,11 +108,13 @@ export default function HeroCarousel() {
           exit="exitImage"
           className="absolute inset-0 w-full h-full"
         >
-          {/* We use standard img with absolute layout or Next/Image */}
-          <img
+          <Image
             src={slides[currentIndex].image}
             alt={slides[currentIndex].title}
-            className="object-cover w-full h-full opacity-60"
+            fill
+            sizes="100vw"
+            priority={currentIndex === 0}
+            className="object-cover opacity-60"
           />
         </motion.div>
       </AnimatePresence>

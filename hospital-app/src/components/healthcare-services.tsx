@@ -6,7 +6,7 @@ import { Activity } from "lucide-react";
 
 const services = [
   {
-    image: "/hospital_about.jpg",
+    image: "/hospital_about.webp",
     title: "Inpatient & Emergency Care",
     description:
       "Immediate, around-the-clock emergency medical treatment and comprehensive hospital stays with continuous monitoring.",
