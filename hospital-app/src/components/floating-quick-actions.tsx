@@ -9,7 +9,7 @@ export default function FloatingQuickActions() {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleEmergency = () => {
-    alert("Emergency Contact Options:\n\nEmergency Room: 911\nHospital Hotline: 1-800-HOSPITAL");
+    alert("Customer Care Lines:\n\n+2348116210926\n+2348051179484\n+2348024215553");
   };
 
   return (

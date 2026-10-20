@@ -124,7 +124,7 @@ export async function POST(req: NextRequest) {
       html: `
         <p>Hi ${name.trim()},</p>
         <p>Thank you for getting in touch. We've received your message and a member of our patient services team will respond promptly.</p>
-        <p>If this is a medical emergency, please call our 24/7 emergency line: <strong>+1 (555) 123-4567</strong>.</p>
+        <p>If this is a medical emergency, please call our 24/7 emergency line: <strong>+2348116210926, +2348051179484, or +2348024215553</strong>.</p>
         <p>Warm regards,<br/>Rhode Hospital Patient Services</p>
       `,
     });

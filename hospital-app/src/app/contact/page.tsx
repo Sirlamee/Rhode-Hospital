@@ -30,8 +30,8 @@ const contactDetails = [
   },
   {
     icon: Phone,
-    label: "Phone",
-    value: "+234 800 MED CARE",
+    label: "Customer Care Lines",
+    value: "+2348116210926 / +2348051179484 / +2348024215553",
     sub: "Available Everyday, 24 Hours",
   },
   {

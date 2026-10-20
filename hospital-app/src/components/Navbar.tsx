@@ -61,7 +61,7 @@ export default function Navbar() {
                 <Link href="#" className="hover:text-red-200 transition-colors">Legal Agreement</Link>
               </div>
               <div className="flex gap-4 mt-2 sm:mt-0 items-center">
-                <span>📞 +1 (555) 123-4567</span>
+                <span>📞 +2348116210926 | +2348051179484 | +2348024215553</span>
                 <span>✉️ contact@rhodehospital.ng</span>
               </div>
             </div>

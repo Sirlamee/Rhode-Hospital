@@ -23,9 +23,10 @@ export default function ContactInformation() {
           {[
             {
               icon: Phone,
-              title: "Emergency & General",
-              detail1: "Emergency: 911",
-              detail2: "General: 1-800-HOSPITAL",
+              title: "Customer Care",
+              detail1: "+2348116210926",
+              detail2: "+2348051179484",
+              detail3: "+2348024215553",
             },
             {
               icon: MapPin,
@@ -55,6 +56,7 @@ export default function ContactInformation() {
               <p className="font-sans text-sm text-[#4B6280] leading-relaxed">
                 {item.detail1}<br />
                 {item.detail2}
+                {item.detail3 && <><br />{item.detail3}</>}
               </p>
             </div>
           ))}

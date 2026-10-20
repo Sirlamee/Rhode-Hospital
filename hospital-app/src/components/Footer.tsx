@@ -30,7 +30,7 @@ export default function Footer() {
           <h4 className="text-lg font-semibold text-white mb-4">Contact Info</h4>
           <ul className="space-y-2">
             <li className="flex items-start gap-2"><span>📍</span> <span>21, Ajobiaro Street, off Popoola Street, Ile-Ise bus stop, Igando Road, Ikotun</span></li>
-            <li className="flex items-center gap-2"><span>📞</span> +1 (555) 123-4567</li>
+            <li className="flex items-start gap-2"><span>📞</span><span>+2348116210926<br />+2348051179484<br />+2348024215553</span></li>
             <li className="flex items-center gap-2"><span>✉️</span> contact@rhodehospital.ng</li>
           </ul>
         </div>
