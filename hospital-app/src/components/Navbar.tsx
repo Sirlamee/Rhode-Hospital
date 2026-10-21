@@ -60,7 +60,7 @@ export default function Navbar() {
                 <span style={{ color: "var(--brand-maroon-pale)" }}>|</span>
                 <Link href="#" className="hover:text-red-200 transition-colors">Legal Agreement</Link>
               </div>
-              <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mt-2 sm:mt-0 items-center">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mt-2 sm:mt-0 text-center items-center">
                 <span>📞 +2348116210926 | +2348051179484 | +2348024215553</span>
                 <span>✉️ contact@rhodehospital.ng</span>
               </div>

@@ -97,7 +97,7 @@ export default function HeroCarousel() {
   };
 
   return (
-    <div className="relative w-full h-svh min-h-[640px] overflow-hidden bg-black md:h-screen md:min-h-0">
+    <div className="relative h-svh w-full overflow-hidden bg-black md:h-screen">
       <AnimatePresence initial={false} custom={{ direction, isFirstLoadComplete }}>
         <motion.div
           key={currentIndex + "-img"}
@@ -117,10 +117,10 @@ export default function HeroCarousel() {
             sizes="100vw"
             priority={currentIndex === 0}
             aria-hidden="true"
-            className="scale-110 object-cover opacity-35 blur-xl md:hidden"
+            className="scale-110 object-cover opacity-35 blur-md md:hidden"
           />
 
-          <div className="absolute inset-x-0 top-[8%] h-[46%] md:inset-0 md:h-full">
+          <div className="absolute inset-0 hidden h-full md:block">
             <Image
               src={slides[currentIndex].image}
               alt={slides[currentIndex].title}
@@ -135,7 +135,7 @@ export default function HeroCarousel() {
         </motion.div>
       </AnimatePresence>
 
-      <div className="pointer-events-none absolute inset-0 z-10 flex items-end justify-center pb-20 sm:pb-24 md:items-center md:pb-0">
+      <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center">
         <AnimatePresence initial={false} custom={{ direction, isFirstLoadComplete }}>
           <motion.div
             key={currentIndex + "-text"}
@@ -144,15 +144,25 @@ export default function HeroCarousel() {
             initial="hiddenText"
             animate="visibleText"
             exit="exitText"
-            className="pointer-events-auto absolute max-w-4xl px-6 text-center"
+            className="pointer-events-auto absolute w-full max-w-4xl px-5 text-center sm:px-6"
           >
-            <h1 className="mb-4 text-4xl font-bold text-white drop-shadow-lg sm:text-5xl md:mb-6 md:text-7xl">
+            <h1 className="mb-2 text-4xl font-bold text-white drop-shadow-lg sm:text-4xl md:mb-6 md:text-7xl">
               {slides[currentIndex].title}
             </h1>
-            <p className="mb-6 text-lg font-medium text-gray-100 drop-shadow-md sm:text-xl md:mb-8 md:text-2xl">
+            <p className="mb-4 text-base font-medium text-gray-100 drop-shadow-md sm:text-lg md:mb-8 md:text-2xl">
               {slides[currentIndex].description}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="relative mx-auto mb-4 aspect-video w-full max-w-xl overflow-hidden rounded-xl shadow-2xl md:hidden">
+              <Image
+                src={slides[currentIndex].image}
+                alt={slides[currentIndex].title}
+                fill
+                sizes="(max-width: 768px) calc(100vw - 2.5rem), 0px"
+                className="object-contain"
+              />
+            </div>
+
+            <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
               <button onClick={() => router.push("/appointments")} className="text-white px-8 py-4 rounded-lg font-medium transition-all shadow-lg hover:opacity-90" style={{ backgroundColor: "var(--brand-maroon)" }}>
                 Book an Appointment
               </button>
