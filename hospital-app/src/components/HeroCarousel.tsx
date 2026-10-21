@@ -97,7 +97,7 @@ export default function HeroCarousel() {
   };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black">
+    <div className="relative w-full h-svh min-h-[640px] overflow-hidden bg-black md:h-screen md:min-h-0">
       <AnimatePresence initial={false} custom={{ direction, isFirstLoadComplete }}>
         <motion.div
           key={currentIndex + "-img"}
@@ -106,20 +106,36 @@ export default function HeroCarousel() {
           initial="hiddenImage"
           animate="visibleImage"
           exit="exitImage"
-          className="absolute inset-0 w-full h-full"
+          className="absolute inset-0 h-full w-full"
         >
+          {/* On narrow screens this blurred layer fills the unused portrait space
+              without sacrificing any of the landscape photo. */}
           <Image
             src={slides[currentIndex].image}
-            alt={slides[currentIndex].title}
+            alt=""
             fill
             sizes="100vw"
             priority={currentIndex === 0}
-            className="object-cover opacity-60"
+            aria-hidden="true"
+            className="scale-110 object-cover opacity-35 blur-xl md:hidden"
           />
+
+          <div className="absolute inset-x-0 top-[8%] h-[46%] md:inset-0 md:h-full">
+            <Image
+              src={slides[currentIndex].image}
+              alt={slides[currentIndex].title}
+              fill
+              sizes="100vw"
+              priority={currentIndex === 0}
+              className="object-contain opacity-90 md:object-cover md:opacity-60"
+            />
+          </div>
+
+          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black md:hidden" />
         </motion.div>
       </AnimatePresence>
 
-      <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+      <div className="pointer-events-none absolute inset-0 z-10 flex items-end justify-center pb-20 sm:pb-24 md:items-center md:pb-0">
         <AnimatePresence initial={false} custom={{ direction, isFirstLoadComplete }}>
           <motion.div
             key={currentIndex + "-text"}
@@ -128,12 +144,12 @@ export default function HeroCarousel() {
             initial="hiddenText"
             animate="visibleText"
             exit="exitText"
-            className="text-center px-6 max-w-4xl absolute pointer-events-auto"
+            className="pointer-events-auto absolute max-w-4xl px-6 text-center"
           >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg">
+            <h1 className="mb-4 text-4xl font-bold text-white drop-shadow-lg sm:text-5xl md:mb-6 md:text-7xl">
               {slides[currentIndex].title}
             </h1>
-            <p className="text-xl md:text-2xl text-gray-100 mb-8 drop-shadow-md font-medium">
+            <p className="mb-6 text-lg font-medium text-gray-100 drop-shadow-md sm:text-xl md:mb-8 md:text-2xl">
               {slides[currentIndex].description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -149,7 +165,7 @@ export default function HeroCarousel() {
       </div>
 
       {/* Left Navigation Zone */}
-      <div className="absolute inset-y-0 left-0 w-24 md:w-32 flex items-center justify-start px-4 md:px-10 z-20 group">
+      <div className="group absolute inset-y-0 left-0 z-20 hidden w-24 items-center justify-start px-4 sm:flex md:w-32 md:px-10">
         <button
           onClick={handlePrev}
           disabled={currentIndex === 0}
@@ -167,7 +183,7 @@ export default function HeroCarousel() {
       </div>
 
       {/* Right Navigation Zone */}
-      <div className="absolute inset-y-0 right-0 w-24 md:w-32 flex items-center justify-end px-4 md:px-10 z-20 group">
+      <div className="group absolute inset-y-0 right-0 z-20 hidden w-24 items-center justify-end px-4 sm:flex md:w-32 md:px-10">
         <button
           onClick={handleNext}
           disabled={currentIndex === slides.length - 1}
@@ -185,7 +201,7 @@ export default function HeroCarousel() {
       </div>
       
       {/* Progress Indicators */}
-      <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-3 z-20">
+      <div className="absolute bottom-6 left-0 right-0 z-20 flex justify-center gap-3 md:bottom-8">
         {slides.map((_, idx) => (
           <div 
             key={idx}
