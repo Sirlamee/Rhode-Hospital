@@ -20,6 +20,10 @@ export const metadata: Metadata = {
     default: "Rhode Hospital",
     template: "%s | Rhode Hospital",
   },
+  icons: {
+    icon: "/logo_rhode.webp",
+    apple: "/logo_rhode.webp",
+  },
   description:
     "Rhode Hospital offers world-class, compassionate healthcare, emergency care, internal medicine, surgery, laboratory, and diagnostic services.",
   keywords: [
@@ -72,9 +76,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  icons: {
-    icon: "/favicon.ico",
   },
   verification: {
     // Add your Google Search Console token here when ready:
